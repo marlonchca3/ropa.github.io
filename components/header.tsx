@@ -11,7 +11,7 @@ export default function Header() {
     <header className="py-4 px-4 sm:px-6 md:px-8 lg:px-12 border-b border-neutral-200 fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
         <Link href="/" className="text-2xl font-light tracking-wider">
-          MODERNO
+          Liz Consuelo
         </Link>
 
         {/* Desktop Navigation */}
@@ -19,22 +19,22 @@ export default function Header() {
           <ul className="flex space-x-8">
             <li>
               <Link href="/" className="text-neutral-700 hover:text-black transition-colors">
-                Home
+                Inicio
               </Link>
             </li>
             <li>
               <Link href="/products" className="text-neutral-700 hover:text-black transition-colors">
-                Products
+                Productos
               </Link>
             </li>
             <li>
               <Link href="/about" className="text-neutral-700 hover:text-black transition-colors">
-                About
+                Acerca
               </Link>
             </li>
             <li>
               <Link href="/contact" className="text-neutral-700 hover:text-black transition-colors">
-                Contact
+                Contacto
               </Link>
             </li>
           </ul>
@@ -45,7 +45,7 @@ export default function Header() {
           type="button"
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={isMenuOpen ? "Cerrar menu" : "Abrir menu"}
         >
           {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -58,22 +58,22 @@ export default function Header() {
             <ul className="space-y-6 text-center">
               <li>
                 <Link href="/" className="text-xl text-neutral-900" onClick={() => setIsMenuOpen(false)}>
-                  Home
+                  Inicio
                 </Link>
               </li>
               <li>
                 <Link href="/products" className="text-xl text-neutral-900" onClick={() => setIsMenuOpen(false)}>
-                  Products
+                  Productos
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="text-xl text-neutral-900" onClick={() => setIsMenuOpen(false)}>
-                  About
+                  Acerca
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-xl text-neutral-900" onClick={() => setIsMenuOpen(false)}>
-                  Contact
+                  Contacto
                 </Link>
               </li>
             </ul>

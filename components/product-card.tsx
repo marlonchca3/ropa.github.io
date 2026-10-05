@@ -24,14 +24,14 @@ export default function ProductCard({ id, name, price, image, description }: Pro
         </div>
         <div className="px-1">
           <h3 className="text-base sm:text-lg font-medium mb-1">{name}</h3>
-          <p className="text-neutral-700 font-medium mb-2">NPR {(price * 133).toLocaleString()}</p>
+          <p className="text-neutral-700 font-medium mb-2">S/ {price.toLocaleString("es-PE")}</p>
           {description && <p className="text-neutral-500 text-sm line-clamp-2 mb-3">{description}</p>}
           <div className="flex items-center justify-between mt-2">
             <span className="text-sm font-medium text-neutral-900 hover:text-neutral-700 transition-colors">
-              View Details
+              Ver detalles
             </span>
             <span className="text-xs px-2 py-1 bg-neutral-100 rounded-full">
-              ${price}
+              S/ {price}
             </span>
           </div>
         </div>

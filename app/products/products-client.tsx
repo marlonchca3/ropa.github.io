@@ -10,7 +10,7 @@ export default function ProductsClient() {
   const categoryParam = searchParams.get('category')
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(categoryParam)
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 200])
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 300])
   const [filteredProducts, setFilteredProducts] = useState(products)
 
   // Apply filters when they change
@@ -44,7 +44,7 @@ export default function ProductsClient() {
   // Clear all filters
   const clearFilters = () => {
     setSelectedCategory(null)
-    setPriceRange([0, 200])
+    setPriceRange([0, 300])
   }
 
   return (
@@ -55,11 +55,11 @@ export default function ProductsClient() {
           {/* Sidebar with filters */}
           <div className="md:w-72 flex-shrink-0 static">
             <div className="sticky top-24 bg-white p-6 border border-neutral-200 rounded-md shadow-sm">
-              <h2 className="font-medium text-lg mb-6 pb-2 border-b border-neutral-100">Filters</h2>
+              <h2 className="font-medium text-lg mb-6 pb-2 border-b border-neutral-100">Filtros</h2>
 
               {/* Categories */}
               <div className="mb-8">
-                <h3 className="font-medium text-sm mb-4 uppercase text-neutral-500 tracking-wider">Categories</h3>
+                <h3 className="font-medium text-sm mb-4 uppercase text-neutral-500 tracking-wider">Categorias</h3>
                 <div className="space-y-3">
                   {categories.map(category => (
                     <div key={category.id} className="flex items-center">
@@ -80,42 +80,42 @@ export default function ProductsClient() {
 
               {/* Price Range */}
               <div className="mb-8">
-                <h3 className="font-medium text-sm mb-4 uppercase text-neutral-500 tracking-wider">Price Range (USD)</h3>
+                <h3 className="font-medium text-sm mb-4 uppercase text-neutral-500 tracking-wider">Rango de precio (S/)</h3>
                 <div className="space-y-5">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-neutral-800">${priceRange[0]}</span>
-                    <span className="text-sm font-medium text-neutral-800">${priceRange[1]}</span>
+                    <span className="text-sm font-medium text-neutral-800">S/ {priceRange[0]}</span>
+                    <span className="text-sm font-medium text-neutral-800">S/ {priceRange[1]}</span>
                   </div>
                   <input
                     type="range"
                     min="0"
-                    max="200"
+                    max="300"
                     value={priceRange[1]}
                     onChange={(e) => handlePriceChange(priceRange[0], parseInt(e.target.value))}
                     className="w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-neutral-800"
-                    aria-label="Maximum price range"
+                    aria-label="Rango maximo de precio"
                   />
                   <div className="grid grid-cols-3 gap-2">
                     <button
                       type="button"
-                      onClick={() => handlePriceChange(0, 50)}
-                      className={`text-xs px-3 py-2 border ${priceRange[0] === 0 && priceRange[1] === 50 ? 'bg-neutral-800 text-white border-neutral-800' : 'border-neutral-300 hover:border-neutral-400'} rounded-md transition-colors`}
+                      onClick={() => handlePriceChange(0, 100)}
+                      className={`text-xs px-3 py-2 border ${priceRange[0] === 0 && priceRange[1] === 100 ? 'bg-neutral-800 text-white border-neutral-800' : 'border-neutral-300 hover:border-neutral-400'} rounded-md transition-colors`}
                     >
-                      Under $50
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handlePriceChange(50, 100)}
-                      className={`text-xs px-3 py-2 border ${priceRange[0] === 50 && priceRange[1] === 100 ? 'bg-neutral-800 text-white border-neutral-800' : 'border-neutral-300 hover:border-neutral-400'} rounded-md transition-colors`}
-                    >
-                      $50-$100
+                      Hasta S/ 100
                     </button>
                     <button
                       type="button"
                       onClick={() => handlePriceChange(100, 200)}
                       className={`text-xs px-3 py-2 border ${priceRange[0] === 100 && priceRange[1] === 200 ? 'bg-neutral-800 text-white border-neutral-800' : 'border-neutral-300 hover:border-neutral-400'} rounded-md transition-colors`}
                     >
-                      $100+
+                      S/ 100-200
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handlePriceChange(200, 300)}
+                      className={`text-xs px-3 py-2 border ${priceRange[0] === 200 && priceRange[1] === 300 ? 'bg-neutral-800 text-white border-neutral-800' : 'border-neutral-300 hover:border-neutral-400'} rounded-md transition-colors`}
+                    >
+                      S/ 200+
                     </button>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export default function ProductsClient() {
                 onClick={clearFilters}
                 className="w-full py-3 text-sm font-medium bg-neutral-100 hover:bg-neutral-200 border border-neutral-300 rounded-md transition-colors"
               >
-                Clear All Filters
+                Limpiar filtros
               </button>
             </div>
           </div>
@@ -135,15 +135,15 @@ export default function ProductsClient() {
           <div className="flex-1">
             <div className="mb-6 flex justify-between items-center bg-white p-4 rounded-md border border-neutral-200 shadow-sm">
               <p className="text-sm font-medium text-neutral-700">
-                <span className="font-bold text-neutral-900">{filteredProducts.length}</span> products found
+                <span className="font-bold text-neutral-900">{filteredProducts.length}</span> productos encontrados
               </p>
-              {(selectedCategory || priceRange[0] > 0 || priceRange[1] < 200) && (
+              {(selectedCategory || priceRange[0] > 0 || priceRange[1] < 300) && (
                 <button
                   type="button"
                   onClick={clearFilters}
                   className="text-sm text-neutral-700 hover:text-neutral-900 flex items-center gap-1"
                 >
-                  <span>Clear filters</span>
+                  <span>Limpiar filtros</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -158,13 +158,13 @@ export default function ProductsClient() {
                   <circle cx="12" cy="12" r="10"></circle>
                   <line x1="8" y1="12" x2="16" y2="12"></line>
                 </svg>
-                <p className="text-neutral-500 mb-4">No products match your filters.</p>
+                <p className="text-neutral-500 mb-4">No hay productos que coincidan con tus filtros.</p>
                 <button
                   type="button"
                   onClick={clearFilters}
                   className="mt-2 px-4 py-2 text-sm bg-neutral-800 text-white rounded-md hover:bg-neutral-700 transition-colors"
                 >
-                  Clear all filters
+                  Limpiar todos los filtros
                 </button>
               </div>
             ) : (

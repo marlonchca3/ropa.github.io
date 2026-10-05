@@ -3,16 +3,16 @@ import { Mail, Clock, Phone, MessageCircle, ShoppingBag, Truck, RefreshCcw } fro
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Contact Us | MODERNO",
-  description: "Need help with your order? Have questions about sizing or returns? Contact our customer service team for assistance with your MODERNO clothing purchase.",
+  title: "Contacto | Liz Consuelo",
+  description: "Contacta a Liz Consuelo para consultas sobre pedidos, tallas, productos y cambios.",
 }
 
 export default function ContactPage() {
   return (
     <div className="my-16 py-16 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-      <h1 className="text-3xl md:text-4xl font-light mb-4 text-center">CONTACT US</h1>
+      <h1 className="text-3xl md:text-4xl font-light mb-4 text-center">CONTACTO</h1>
       <p className="text-neutral-600 text-center max-w-2xl mx-auto mb-8 md:mb-12">
-        We're here to help with any questions about your order, our products, or the stories behind them.
+        Estamos aqui para ayudarte con consultas sobre pedidos, productos, tallas o cambios.
       </p>
 
       {/* Customer Service Boxes */}
@@ -21,10 +21,10 @@ export default function ContactPage() {
           <div className="bg-white p-3 rounded-full mb-4">
             <MessageCircle className="w-6 h-6 text-neutral-700" />
           </div>
-          <h3 className="font-medium mb-2">General Inquiries</h3>
-          <p className="text-neutral-600 text-sm mb-3">Questions about our brand or products</p>
+          <h3 className="font-medium mb-2">Consultas generales</h3>
+          <p className="text-neutral-600 text-sm mb-3">Preguntas sobre la marca o productos</p>
           <Link href="#contact-form" className="text-sm underline underline-offset-4 mt-auto">
-            Send a Message
+            Enviar mensaje
           </Link>
         </div>
 
@@ -32,10 +32,10 @@ export default function ContactPage() {
           <div className="bg-white p-3 rounded-full mb-4">
             <ShoppingBag className="w-6 h-6 text-neutral-700" />
           </div>
-          <h3 className="font-medium mb-2">Order Support</h3>
-          <p className="text-neutral-600 text-sm mb-3">Help with existing orders or payments</p>
+          <h3 className="font-medium mb-2">Pedidos</h3>
+          <p className="text-neutral-600 text-sm mb-3">Ayuda con compras o pagos</p>
           <Link href="#contact-form" className="text-sm underline underline-offset-4 mt-auto">
-            Order Help
+            Ayuda con pedido
           </Link>
         </div>
 
@@ -43,10 +43,10 @@ export default function ContactPage() {
           <div className="bg-white p-3 rounded-full mb-4">
             <Truck className="w-6 h-6 text-neutral-700" />
           </div>
-          <h3 className="font-medium mb-2">Shipping</h3>
-          <p className="text-neutral-600 text-sm mb-3">Delivery times and tracking information</p>
+          <h3 className="font-medium mb-2">Envios</h3>
+          <p className="text-neutral-600 text-sm mb-3">Tiempos de entrega y seguimiento</p>
           <Link href="#shipping-info" className="text-sm underline underline-offset-4 mt-auto">
-            Shipping Details
+            Detalles de envio
           </Link>
         </div>
 
@@ -54,10 +54,10 @@ export default function ContactPage() {
           <div className="bg-white p-3 rounded-full mb-4">
             <RefreshCcw className="w-6 h-6 text-neutral-700" />
           </div>
-          <h3 className="font-medium mb-2">Returns & Exchanges</h3>
-          <p className="text-neutral-600 text-sm mb-3">Policy and process information</p>
+          <h3 className="font-medium mb-2">Cambios</h3>
+          <p className="text-neutral-600 text-sm mb-3">Politicas y proceso</p>
           <Link href="#returns-policy" className="text-sm underline underline-offset-4 mt-auto">
-            Return Policy
+            Politica de cambios
           </Link>
         </div>
       </div>
@@ -65,76 +65,76 @@ export default function ContactPage() {
       <div className="grid md:grid-cols-2 gap-12 items-start">
         {/* Contact Form */}
         <div id="contact-form">
-          <h2 className="text-2xl font-light mb-6">Get In Touch</h2>
+          <h2 className="text-2xl font-light mb-6">Escribenos</h2>
 
           <form className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">
-                Name
+                Nombre
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 className="w-full px-4 py-2 border border-neutral-300 focus:outline-none focus:ring-1 focus:ring-neutral-900 focus:border-neutral-900"
-                placeholder="Your name"
+                placeholder="Tu nombre"
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">
-                Email
+                Correo
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 className="w-full px-4 py-2 border border-neutral-300 focus:outline-none focus:ring-1 focus:ring-neutral-900 focus:border-neutral-900"
-                placeholder="your.email@example.com"
+                placeholder="tu.correo@ejemplo.com"
               />
             </div>
 
             <div>
               <label htmlFor="order" className="block text-sm font-medium text-neutral-700 mb-1">
-                Order Number (if applicable)
+                Numero de pedido (si aplica)
               </label>
               <input
                 type="text"
                 id="order"
                 name="order"
                 className="w-full px-4 py-2 border border-neutral-300 focus:outline-none focus:ring-1 focus:ring-neutral-900 focus:border-neutral-900"
-                placeholder="e.g. MNY12345"
+                placeholder="Ej. LC12345"
               />
             </div>
 
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-neutral-700 mb-1">
-                Subject
+                Asunto
               </label>
               <select
                 id="subject"
                 name="subject"
                 className="w-full px-4 py-2 border border-neutral-300 focus:outline-none focus:ring-1 focus:ring-neutral-900 focus:border-neutral-900"
               >
-                <option value="">Select a topic</option>
-                <option value="order">Order Status</option>
-                <option value="returns">Returns & Exchanges</option>
-                <option value="product">Product Information</option>
-                <option value="sizing">Sizing Questions</option>
-                <option value="other">Other</option>
+                <option value="">Selecciona un tema</option>
+                <option value="order">Estado del pedido</option>
+                <option value="returns">Cambios o devoluciones</option>
+                <option value="product">Informacion de producto</option>
+                <option value="sizing">Consulta de tallas</option>
+                <option value="other">Otro</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">
-                Message
+                Mensaje
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={5}
                 className="w-full px-4 py-2 border border-neutral-300 focus:outline-none focus:ring-1 focus:ring-neutral-900 focus:border-neutral-900"
-                placeholder="How can we help you?"
+                placeholder="Como podemos ayudarte?"
               ></textarea>
             </div>
 
@@ -142,7 +142,7 @@ export default function ContactPage() {
               type="submit"
               className="px-6 py-3 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
             >
-              Send Message
+              Enviar mensaje
             </button>
           </form>
         </div>
@@ -153,12 +153,9 @@ export default function ContactPage() {
             <div className="flex items-start">
               <Mail className="w-5 h-5 mt-1 mr-4 text-neutral-700" />
               <div>
-                <h3 className="font-medium mb-1">Email</h3>
+                <h3 className="font-medium mb-1">Correo</h3>
                 <p className="text-neutral-600">
-                  <a href="mailto:support@MODERNO.com" className="hover:underline">support@MODERNO.com</a> - Customer Support
-                </p>
-                <p className="text-neutral-600">
-                  <a href="mailto:orders@MODERNO.com" className="hover:underline">orders@MODERNO.com</a> - Order Inquiries
+                  <a href="mailto:lizconsuelo@gmail.com" className="hover:underline">lizconsuelo@gmail.com</a>
                 </p>
               </div>
             </div>
@@ -166,56 +163,58 @@ export default function ContactPage() {
             <div className="flex items-start">
               <Phone className="w-5 h-5 mt-1 mr-4 text-neutral-700" />
               <div>
-                <h3 className="font-medium mb-1">Phone</h3>
-                <p className="text-neutral-600">+977 1 4123456</p>
-                <p className="text-neutral-600 text-sm">Available Sunday - Friday, 10am - 6pm NPT</p>
+                <h3 className="font-medium mb-1">Telefono</h3>
+                <p className="text-neutral-600">
+                  <a href="tel:+51912114592" className="hover:underline">+51 912 114 592</a>
+                </p>
+                <p className="text-neutral-600 text-sm">Disponible de lunes a sabado, 10 a.m. - 6 p.m.</p>
               </div>
             </div>
 
             <div className="flex items-start">
               <Clock className="w-5 h-5 mt-1 mr-4 text-neutral-700" />
               <div>
-                <h3 className="font-medium mb-1">Customer Service Hours</h3>
+                <h3 className="font-medium mb-1">Horario de atencion</h3>
                 <p className="text-neutral-600">
-                  Sunday - Friday: 10am - 6pm NPT
+                  Lunes - sabado: 10 a.m. - 6 p.m.
                   <br />
-                  Saturday: Closed
+                  Domingo: cerrado
                 </p>
                 <p className="text-neutral-600 text-sm mt-1">
-                  We aim to respond to all inquiries within 24 hours.
+                  Respondemos la mayoria de consultas dentro de las siguientes 24 horas.
                 </p>
               </div>
             </div>
           </div>
 
           <div id="shipping-info" className="mb-10">
-            <h2 className="text-2xl font-light mb-4">Shipping Information</h2>
+            <h2 className="text-2xl font-light mb-4">Informacion de envios</h2>
             <div className="bg-neutral-50 p-6">
               <p className="text-neutral-600 mb-3">
-                <strong>Domestic Shipping (Nepal):</strong> 2-3 business days
+                <strong>Lima Metropolitana:</strong> 2-3 dias habiles
               </p>
               <p className="text-neutral-600 mb-3">
-                <strong>International Shipping:</strong> 7-14 business days
+                <strong>Provincias:</strong> 4-7 dias habiles
               </p>
               <p className="text-neutral-600">
-                All orders are processed within 1-2 business days after payment confirmation.
-                Tracking information will be provided via email once your order ships.
+                Todos los pedidos se procesan dentro de 1-2 dias habiles despues de confirmar el pago.
+                Te enviaremos la informacion de seguimiento por correo o WhatsApp.
               </p>
             </div>
           </div>
 
           <div id="returns-policy">
-            <h2 className="text-2xl font-light mb-4">Returns & Exchanges</h2>
+            <h2 className="text-2xl font-light mb-4">Cambios y devoluciones</h2>
             <div className="bg-neutral-50 p-6">
               <p className="text-neutral-600 mb-3">
-                We accept returns within 30 days of delivery for unworn items in original packaging.
+                Aceptamos cambios dentro de los 7 dias posteriores a la entrega para prendas sin uso y con empaque original.
               </p>
               <p className="text-neutral-600 mb-3">
-                Exchanges are available for size issues. Please contact our customer service team to arrange an exchange.
+                Los cambios por talla estan sujetos a disponibilidad. Contactanos para coordinar el proceso.
               </p>
               <p className="text-neutral-600">
                 <Link href="/returns" className="underline underline-offset-4">
-                  View our full returns policy
+                  Ver politica completa
                 </Link>
               </p>
             </div>
@@ -225,7 +224,7 @@ export default function ContactPage() {
 
       {/* Social Media */}
       <div className="mt-16 text-center">
-        <h2 className="text-2xl font-light mb-6">Follow Our Journey</h2>
+        <h2 className="text-2xl font-light mb-6">Sigue nuestra historia</h2>
         <div className="flex justify-center space-x-8">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group">
             <div className="w-12 h-12 flex items-center justify-center border border-neutral-300 rounded-full group-hover:border-neutral-900 transition-colors mb-2">
@@ -247,7 +246,7 @@ export default function ContactPage() {
           </a>
         </div>
         <p className="text-neutral-600 mt-6 max-w-xl mx-auto">
-          Follow us on social media for styling tips, behind-the-scenes content, and to be the first to know about new arrivals and special promotions.
+          Siguenos en redes para ver ideas de outfits, novedades, promociones y contenido detras de la marca.
         </p>
       </div>
     </div>

@@ -2,61 +2,58 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "Learn about our brand story, values, and commitment to sustainable, minimalist fashion.",
+  title: "Acerca",
+  description: "Conoce la historia de Liz Consuelo, una marca peruana de moda moderna y versatil.",
 }
 
 export default function AboutPage() {
   return (
     <div className=" my-16 py-16 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-      <h1 className="text-3xl md:text-4xl font-light mb-4 text-center">OUR STORY</h1>
+      <h1 className="text-3xl md:text-4xl font-light mb-4 text-center">NUESTRA HISTORIA</h1>
       <p className="text-neutral-600 text-center max-w-2xl mx-auto mb-8 md:mb-12">
-        Founded on the principles of preserving Nepali craftsmanship while embracing modern design.
+        Liz Consuelo es una marca peruana creada para mujeres que buscan prendas modernas, comodas y con personalidad.
       </p>
 
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
         <div>
-          <Image src="/images/owner.png" alt="MODERNO founder" width={600} height={800} className="w-full h-auto" />
+          <Image src="/images/owner.png" alt="Fundadora de Liz Consuelo" width={600} height={800} className="w-full h-auto" />
         </div>
         <div>
-          <h2 className="text-2xl font-light mb-6">The Beginning</h2>
+          <h2 className="text-2xl font-light mb-6">El comienzo</h2>
           <p className="text-neutral-600 mb-4">
-            MODERNO was founded in 2019 by a young Nepali entrepreneur with a vision to showcase the beauty of
-            traditional Nepali textiles and craftsmanship to the world. Growing up surrounded by the rich textile
-            heritage of Nepal, our founder was inspired to create a brand that would honor these traditions while making
-            them relevant for the modern consumer.
+            Liz Consuelo nacio en Peru como un proyecto de moda pensado para acompanar la vida real: trabajo, reuniones,
+            salidas y momentos cotidianos donde una prenda bien elegida cambia como te sientes.
           </p>
           <p className="text-neutral-600 mb-4">
-            What began as a small collection of handwoven scarves has evolved into a comprehensive range of clothing and
-            accessories, each piece thoughtfully designed and ethically produced in Nepal.
+            Empezo como una pequena seleccion de basicos y piezas versatiles, y fue creciendo hasta convertirse en una
+            propuesta de ropa femenina con estilo limpio, detalles cuidados y precios accesibles en soles.
           </p>
           <p className="text-neutral-600">
-            Today, MODERNO continues to work directly with local artisans, ensuring fair wages and preserving
-            traditional techniques that have been passed down through generations.
+            Hoy, la marca busca representar una elegancia cercana: prendas que se sienten actuales, faciles de combinar y
+            pensadas para mujeres peruanas con ritmo propio.
           </p>
         </div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
         <div className="order-2 md:order-1">
-          <h2 className="text-2xl font-light mb-6">Our Values</h2>
+          <h2 className="text-2xl font-light mb-6">Nuestros valores</h2>
           <p className="text-neutral-600 mb-4">
-            At MODERNO, we believe in honoring tradition while embracing innovation. Our designs celebrate the intricate
-            patterns and techniques of Nepali textiles, reimagined for contemporary wardrobes.
+            En Liz Consuelo creemos que la moda debe sentirse bonita, practica y honesta. Por eso priorizamos siluetas
+            favorecedoras, telas comodas y colores que se integran facilmente al guardarropa.
           </p>
           <p className="text-neutral-600 mb-4">
-            Sustainability is at the core of everything we do. We work with natural, locally-sourced materials and
-            traditional, low-impact production methods that have been used in Nepal for centuries.
+            Apostamos por prendas que puedas repetir sin aburrirte, combinarlas de muchas maneras y conservar por mas
+            tiempo.
           </p>
           <p className="text-neutral-600">
-            We value community and are committed to supporting the livelihoods of Nepali artisans. By choosing MODERNO,
-            you're not just buying a garment – you're supporting a sustainable ecosystem of craft and culture.
+            Cada coleccion se inspira en la vida urbana peruana, con una mirada moderna y femenina.
           </p>
         </div>
         <div className="order-1 md:order-2">
           <Image
             src="/images/workshop.png"
-            alt="Nepali artisans at work"
+            alt="Equipo de Liz Consuelo trabajando"
             width={600}
             height={800}
             className="w-full h-auto"
@@ -65,13 +62,12 @@ export default function AboutPage() {
       </div>
 
       <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-2xl font-light mb-6">Our Promise</h2>
+        <h2 className="text-2xl font-light mb-6">Nuestra promesa</h2>
         <p className="text-neutral-600 mb-4">
-          We promise to create clothing that connects you to the rich cultural heritage of Nepal. Pieces that tell a
-          story and make you feel part of something meaningful, while minimizing their impact on our planet.
+          Queremos ofrecer ropa que te ayude a vestirte con seguridad y sencillez, sin perder tu estilo personal.
         </p>
         <p className="text-neutral-600">
-          Thank you for being part of our journey toward preserving traditional craftsmanship in a modern world.
+          Gracias por ser parte de Liz Consuelo, una marca peruana hecha para acompanarte todos los dias.
         </p>
       </div>
     </div>

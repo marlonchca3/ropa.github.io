@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | MODERNO",
-    default: "MODERNO - Nepali Clothing Brand",
+    template: "%s | Liz Consuelo",
+    default: "Liz Consuelo - Marca peruana de moda",
   },
-  description: "Authentic Nepali clothing with a modern, minimalist approach.",
-  keywords: ["clothing", "fashion", "Nepal", "sustainable", "handcrafted"],
+  description: "Moda peruana con prendas modernas, versatiles y hechas para el dia a dia.",
+  keywords: ["ropa", "moda", "Peru", "Liz Consuelo", "prendas"],
     generator: 'v0.dev'
 }
 
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${inter.className} bg-white text-neutral-900 min-h-screen flex flex-col`}>
         <Header />
         <main className="flex-grow">{children}</main>

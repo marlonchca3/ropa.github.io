@@ -12,7 +12,7 @@ export default function SizeSelector({ sizes, availableSizes }: SizeSelectorProp
 
   return (
     <div className="mt-6">
-      <h3 className="text-sm font-medium mb-3">Size</h3>
+      <h3 className="text-sm font-medium mb-3">Talla</h3>
       <div className="flex flex-wrap gap-2">
         {sizes.map((size) => {
           const isAvailable = availableSizes.includes(size)
@@ -34,9 +34,9 @@ export default function SizeSelector({ sizes, availableSizes }: SizeSelectorProp
         })}
       </div>
       {selectedSize ? (
-        <p className="text-sm text-neutral-600 mt-2">Selected size: {selectedSize}</p>
+        <p className="text-sm text-neutral-600 mt-2">Talla seleccionada: {selectedSize}</p>
       ) : (
-        <p className="text-sm text-neutral-600 mt-2">Please select a size</p>
+        <p className="text-sm text-neutral-600 mt-2">Elige una talla</p>
       )}
     </div>
   )

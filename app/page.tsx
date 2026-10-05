@@ -5,8 +5,8 @@ import { getNewArrivals } from "@/data/products"
 import ProductImage from "@/components/product-image"
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "Discover our minimalist clothing collection designed for the modern individual.",
+  title: "Inicio",
+  description: "Descubre la coleccion de Liz Consuelo, moda peruana moderna para el dia a dia.",
 }
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
         <div className="md:w-1/2 relative h-[50vh] md:h-auto order-2 md:order-1">
           <Image
             src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="MODERNO clothing collection"
+            alt="Coleccion de ropa Liz Consuelo"
             fill
             priority
             className="object-cover"
@@ -33,28 +33,28 @@ export default function Home() {
         <div className="md:w-1/2 flex flex-col justify-center px-6 py-16 md:py-0 md:px-12 lg:px-16 bg-neutral-50 z-10 order-1 md:order-2">
           <div className="max-w-xl">
             <span className="inline-block px-3 py-1 bg-neutral-200 text-neutral-700 text-xs tracking-wider mb-6 rounded-full">
-              AUTHENTIC CRAFTSMANSHIP
+              MODA PERUANA
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight">
-              <span className="block">Nepali</span>
-              <span className="block font-medium">Artisan</span>
-              <span className="block">Collection</span>
+              <span className="block">Liz</span>
+              <span className="block font-medium">Consuelo</span>
+              <span className="block">Coleccion</span>
             </h1>
             <p className="text-lg text-neutral-700 mb-8 max-w-md">
-              Handcrafted clothing that blends traditional techniques with modern design. Sustainably made in Nepal.
+              Prendas versatiles, modernas y comodas, creadas en Peru para acompanarte en cada momento del dia.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/products"
                 className="px-8 py-3 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors duration-300"
               >
-                Shop Collection
+                Ver coleccion
               </Link>
               <Link
                 href="/about"
                 className="px-8 py-3 border border-neutral-300 text-neutral-700 hover:border-neutral-900 transition-colors duration-300"
               >
-                Our Story
+                Nuestra historia
               </Link>
             </div>
           </div>
@@ -63,9 +63,9 @@ export default function Home() {
 
       {/* Categories Section */}
       <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-light mb-6 text-center">SHOP BY CATEGORY</h2>
+        <h2 className="text-2xl md:text-3xl font-light mb-6 text-center">COMPRA POR CATEGORIA</h2>
         <p className="text-neutral-600 text-center max-w-2xl mx-auto mb-12">
-          Explore our collection of handcrafted clothing, designed with care and made to last
+          Explora prendas pensadas para combinar facil, sentirse bien y durar temporada tras temporada.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -74,15 +74,15 @@ export default function Home() {
             <div className="aspect-square bg-neutral-100 relative">
               <Image
                 src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Tops and T-shirts"
+                alt="Polos y blusas"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-              <h3 className="font-medium text-lg">Tops</h3>
-              <p className="text-sm text-white/80">T-shirts & Casual Tops</p>
+              <h3 className="font-medium text-lg">Polos y blusas</h3>
+              <p className="text-sm text-white/80">Basicos y prendas casuales</p>
             </div>
           </Link>
 
@@ -91,15 +91,15 @@ export default function Home() {
             <div className="aspect-square bg-neutral-100 relative">
               <Image
                 src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
-                alt="Pants and Bottoms"
+                alt="Pantalones"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-              <h3 className="font-medium text-lg">Bottoms</h3>
-              <p className="text-sm text-white/80">Jeans & Chinos</p>
+              <h3 className="font-medium text-lg">Pantalones</h3>
+              <p className="text-sm text-white/80">Jeans y chinos</p>
             </div>
           </Link>
 
@@ -108,15 +108,15 @@ export default function Home() {
             <div className="aspect-square bg-neutral-100 relative">
               <Image
                 src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80"
-                alt="Jackets and Outerwear"
+                alt="Casacas y abrigos"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-              <h3 className="font-medium text-lg">Outerwear</h3>
-              <p className="text-sm text-white/80">Jackets & Coats</p>
+              <h3 className="font-medium text-lg">Abrigos</h3>
+              <p className="text-sm text-white/80">Casacas y capas ligeras</p>
             </div>
           </Link>
 
@@ -125,7 +125,7 @@ export default function Home() {
             <div className="aspect-square bg-neutral-100 relative">
               <Image
                 src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
-                alt="Formal Wear"
+                alt="Ropa formal"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -133,7 +133,7 @@ export default function Home() {
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
               <h3 className="font-medium text-lg">Formal</h3>
-              <p className="text-sm text-white/80">Blazers & Dress Shirts</p>
+              <p className="text-sm text-white/80">Blazers y camisas</p>
             </div>
           </Link>
         </div>
@@ -142,33 +142,33 @@ export default function Home() {
       {/* Our Philosophy Section */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-neutral-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-light mb-8 md:mb-12 text-center">OUR PHILOSOPHY</h2>
+          <h2 className="text-2xl md:text-3xl font-light mb-8 md:mb-12 text-center">NUESTRA FILOSOFIA</h2>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <div className="text-center p-4 sm:p-6 bg-white shadow-sm">
               <div className="w-16 h-16 flex items-center justify-center bg-neutral-100 rounded-full mx-auto mb-6">
                 <span className="text-2xl">✨</span>
               </div>
-              <h3 className="text-xl mb-4 font-medium">Handcrafted</h3>
+              <h3 className="text-xl mb-4 font-medium">Hecho con detalle</h3>
               <p className="text-neutral-600">
-                Each piece is carefully handcrafted by skilled Nepali artisans using traditional techniques.
+                Cada prenda se elige y disena cuidando el calce, la textura y los acabados.
               </p>
             </div>
             <div className="text-center p-4 sm:p-6 bg-white shadow-sm">
               <div className="w-16 h-16 flex items-center justify-center bg-neutral-100 rounded-full mx-auto mb-6">
                 <span className="text-2xl">🌱</span>
               </div>
-              <h3 className="text-xl mb-4 font-medium">Sustainable</h3>
+              <h3 className="text-xl mb-4 font-medium">Versatil</h3>
               <p className="text-neutral-600">
-                We use locally sourced, eco-friendly materials that honor Nepal's natural resources.
+                Creamos piezas faciles de combinar para que puedas usarlas muchas veces y de distintas formas.
               </p>
             </div>
             <div className="text-center p-4 sm:p-6 bg-white shadow-sm">
               <div className="w-16 h-16 flex items-center justify-center bg-neutral-100 rounded-full mx-auto mb-6">
                 <span className="text-2xl">🧵</span>
               </div>
-              <h3 className="text-xl mb-4 font-medium">Authentic</h3>
+              <h3 className="text-xl mb-4 font-medium">Autentica</h3>
               <p className="text-neutral-600">
-                Our designs blend traditional Nepali aesthetics with modern, minimalist sensibilities.
+                Liz Consuelo nace en Peru con una mirada femenina, moderna y cercana.
               </p>
             </div>
           </div>
@@ -181,15 +181,15 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
               <span className="inline-block px-3 py-1 bg-neutral-100 text-neutral-700 text-xs tracking-wider mb-4 rounded-full">
-                JUST ARRIVED
+                RECIEN LLEGADO
               </span>
-              <h2 className="text-2xl md:text-3xl font-light">New Arrivals</h2>
+              <h2 className="text-2xl md:text-3xl font-light">Novedades</h2>
             </div>
             <Link
               href="/products"
               className="text-sm mt-4 md:mt-0 group flex items-center"
             >
-              View All Collection
+              Ver toda la coleccion
               <span className="ml-2 group-hover:ml-3 transition-all duration-300">→</span>
             </Link>
           </div>
@@ -209,13 +209,13 @@ export default function Home() {
                       href={`/products/${product.id}`}
                       className="w-full py-2 bg-white text-neutral-900 text-center text-sm block hover:bg-neutral-900 hover:text-white transition-colors"
                     >
-                      Quick View
+                      Vista rapida
                     </Link>
                   </div>
                 </div>
                 <div className="flex justify-between items-start mb-1">
                   <h3 className="text-lg font-medium">{product.name}</h3>
-                  <p className="text-neutral-900 font-medium">NPR {(product.price * 133).toLocaleString()}</p>
+                  <p className="text-neutral-900 font-medium">S/ {product.price.toLocaleString("es-PE")}</p>
                 </div>
                 <p className="text-neutral-500 text-sm mb-3 line-clamp-1">
                   {product.description?.split('\n')[0]}
@@ -229,7 +229,7 @@ export default function Home() {
               href="/products"
               className="inline-block px-10 py-3 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors duration-300"
             >
-              Shop All Products
+              Ver todos los productos
             </Link>
           </div>
         </div>

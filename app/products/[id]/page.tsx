@@ -1,40 +1,25 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { useParams } from "next/navigation"
 import Link from "next/link"
 import ImageCarousel from "@/components/image-carousel"
 import SizeSelector from "@/components/size-selector"
-import { getProductById } from "@/data/products"
+import { getProductById, products } from "@/data/products"
 
-export default function ProductPage() {
-  const params = useParams()
-  const [product, setProduct] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+export function generateStaticParams() {
+  return products.map((product) => ({
+    id: product.id.toString(),
+  }))
+}
 
-  useEffect(() => {
-    if (params.id) {
-      const id = Number(params.id)
-      const foundProduct = getProductById(id)
-      setProduct(foundProduct)
-      setLoading(false)
-    }
-  }, [params.id])
-
-  if (loading) {
-    return <div className="py-12 px-4 text-center">Loading...</div>
-  }
+export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const product = getProductById(Number(id))
 
   if (!product) {
-    return <div className="py-12 px-4 text-center">Product not found</div>
+    return <div className="py-12 px-4 text-center">Producto no encontrado</div>
   }
-
-  // Convert price to NPR (approximate exchange rate)
-  const priceNPR = product.price * 133
 
   // Stock status
   const stockStatus =
-    product.stock > 10 ? "In Stock" : product.stock > 0 ? `Low Stock (${product.stock} left)` : "Out of Stock"
+    product.stock > 10 ? "Disponible" : product.stock > 0 ? `Ultimas unidades (${product.stock})` : "Agotado"
 
   const stockStatusColor = product.stock > 10 ? "text-green-600" : product.stock > 0 ? "text-amber-600" : "text-red-600"
 
@@ -42,7 +27,7 @@ export default function ProductPage() {
     <div className="my-16 py-16 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
       <div className="mb-6">
         <Link href="/products" className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
-          ← Back to Products
+          ← Volver a productos
         </Link>
       </div>
 
@@ -57,8 +42,7 @@ export default function ProductPage() {
           <h1 className="text-2xl sm:text-3xl font-light mb-2">{product.name}</h1>
 
           <div className="flex items-center gap-4 mb-4">
-            <p className="text-xl font-medium">NPR {priceNPR.toLocaleString()}</p>
-            <p className="text-sm text-neutral-500">(USD ${product.price})</p>
+            <p className="text-xl font-medium">S/ {product.price.toLocaleString("es-PE")}</p>
           </div>
 
           <div className="flex items-center gap-2 mb-6">
@@ -74,14 +58,14 @@ export default function ProductPage() {
 
           {/* Material & Care */}
           <div className="mt-10 pt-6 border-t border-neutral-200">
-            <h2 className="text-lg font-medium mb-4">Details</h2>
+            <h2 className="text-lg font-medium mb-4">Detalles</h2>
             <div className="grid gap-4">
               <div>
                 <h3 className="text-sm font-medium">Material</h3>
                 <p className="text-neutral-600">{product.material}</p>
               </div>
               <div>
-                <h3 className="text-sm font-medium">Care</h3>
+                <h3 className="text-sm font-medium">Cuidado</h3>
                 <p className="text-neutral-600">{product.care}</p>
               </div>
             </div>
@@ -91,7 +75,7 @@ export default function ProductPage() {
 
       {/* Full Description */}
       <div className="mt-12 pt-8 border-t border-neutral-200">
-        <h2 className="text-xl font-medium mb-6">About this product</h2>
+        <h2 className="text-xl font-medium mb-6">Sobre este producto</h2>
         <div className="prose max-w-none text-neutral-700">
           {product.description.split("\n\n").map((paragraph: string, i: number) => (
             <p key={i} className="mb-4">
