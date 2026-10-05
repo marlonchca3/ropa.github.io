@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProduction = process.env.NODE_ENV === "production"
-const repoName = "modern-basic-clothing-brand-website"
+const repoName = "ropa.github.io"
 
 const nextConfig = {
   output: "export",
