@@ -2,7 +2,9 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
+import { publicAssetPath } from "@/lib/utils"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,8 +12,15 @@ export default function Header() {
   return (
     <header className="py-4 px-4 sm:px-6 md:px-8 lg:px-12 border-b border-neutral-200 fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
-        <Link href="/" className="text-2xl font-light tracking-wider">
-          Liz Consuelo
+        <Link href="/" aria-label="Liz Consuelo - Inicio" className="shrink-0">
+          <Image
+            src={publicAssetPath("/lizconsuelo-logo.png")}
+            alt="Sello de Liz Consuelo"
+            width={512}
+            height={512}
+            className="h-12 w-12 sm:h-14 sm:w-14"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
