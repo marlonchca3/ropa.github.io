@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { getNewArrivals } from "@/data/products"
 import ProductImage from "@/components/product-image"
+import { publicAssetPath } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Inicio",
@@ -27,6 +28,15 @@ export default function Home() {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
+          <div className="absolute bottom-5 right-5 z-10 h-24 w-24 overflow-hidden rounded-full bg-white shadow-lg ring-4 ring-white/80 sm:bottom-8 sm:right-8 sm:h-32 sm:w-32">
+            <Image
+              src={publicAssetPath("/lizconsuelo-logo.png")}
+              alt="Sello de Liz Consuelo"
+              width={512}
+              height={512}
+              className="h-full w-full object-contain"
+            />
+          </div>
         </div>
 
         {/* Right side - Text content */}
