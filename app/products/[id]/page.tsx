@@ -3,8 +3,6 @@ import ImageCarousel from "@/components/image-carousel"
 import SizeSelector from "@/components/size-selector"
 import { getProductById, products } from "@/data/products"
 
-export const dynamicParams = false
-
 export function generateStaticParams() {
   return products.map((product) => ({
     id: product.id.toString(),
