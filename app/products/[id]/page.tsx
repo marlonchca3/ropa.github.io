@@ -24,14 +24,14 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   const stockStatusColor = product.stock > 10 ? "text-green-600" : product.stock > 0 ? "text-amber-600" : "text-red-600"
 
   return (
-    <div className="my-16 py-16 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+    <div className="mt-20 mb-12 py-8 px-4 sm:mt-24 sm:px-6 sm:py-12 md:my-16 md:px-8 md:py-16 lg:px-12 max-w-7xl mx-auto">
       <div className="mb-6">
         <Link href="/products" className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
           ← Volver a productos
         </Link>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Product Images */}
         <div>
           <ImageCarousel images={product.images} alt={product.name} />
@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             <p className="text-xl font-medium">S/ {product.price.toLocaleString("es-PE")}</p>
           </div>
 
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex flex-col gap-1 mb-6 sm:flex-row sm:items-center sm:gap-2">
             <span className={`text-sm font-medium ${stockStatusColor}`}>{stockStatus}</span>
             <span className="text-sm text-neutral-500">SKU: {product.sku}</span>
           </div>

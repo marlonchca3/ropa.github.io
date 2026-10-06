@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="py-12 px-4 sm:px-6 md:px-8 lg:px-12 border-t border-neutral-200">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="text-lg font-medium mb-4">Liz Consuelo</h3>
             <p className="text-neutral-600 text-sm">Marca peruana de moda con prendas modernas, comodas y faciles de combinar.</p>
@@ -87,11 +87,11 @@ export default function Footer() {
         </div>
 
         {/* Copyright and Links */}
-        <div className="mt-12 pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-600">
+        <div className="mt-12 pt-8 border-t border-neutral-200 flex flex-col gap-4 text-center md:flex-row md:justify-between md:text-left items-center text-sm text-neutral-600">
           <p>
             &copy; {currentYear} Liz Consuelo. Todos los derechos reservados.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:justify-end">
             <Link href="#" className="hover:text-black transition-colors">
               Politica de privacidad
             </Link>

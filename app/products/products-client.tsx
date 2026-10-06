@@ -48,19 +48,19 @@ export default function ProductsClient() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto my-16 py-16">
+    <div className="max-w-7xl mx-auto mt-20 mb-12 py-8 sm:mt-24 sm:py-12 md:my-16 md:py-16">
       {/* Main content with filters and products */}
       <div className="container space-y-4 px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(240px,18rem)_1fr] gap-8 relative">
           {/* Sidebar with filters */}
-          <div className="md:w-72 flex-shrink-0 static">
-            <div className="sticky top-24 bg-white p-6 border border-neutral-200 rounded-md shadow-sm">
+          <div className="flex-shrink-0 static">
+            <div className="lg:sticky lg:top-24 bg-white p-4 sm:p-6 border border-neutral-200 rounded-md shadow-sm">
               <h2 className="font-medium text-lg mb-6 pb-2 border-b border-neutral-100">Filtros</h2>
 
               {/* Categories */}
               <div className="mb-8">
                 <h3 className="font-medium text-sm mb-4 uppercase text-neutral-500 tracking-wider">Categorias</h3>
-                <div className="space-y-3">
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-1 lg:space-y-0">
                   {categories.map(category => (
                     <div key={category.id} className="flex items-center">
                       <input
@@ -95,7 +95,7 @@ export default function ProductsClient() {
                     className="w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-neutral-800"
                     aria-label="Rango maximo de precio"
                   />
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 lg:grid-cols-1">
                     <button
                       type="button"
                       onClick={() => handlePriceChange(0, 100)}
@@ -133,7 +133,7 @@ export default function ProductsClient() {
           </div>
           {/* Product Grid */}
           <div className="flex-1">
-            <div className="mb-6 flex justify-between items-center bg-white p-4 rounded-md border border-neutral-200 shadow-sm">
+            <div className="mb-6 flex flex-col gap-3 bg-white p-4 rounded-md border border-neutral-200 shadow-sm sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm font-medium text-neutral-700">
                 <span className="font-bold text-neutral-900">{filteredProducts.length}</span> productos encontrados
               </p>
@@ -141,7 +141,7 @@ export default function ProductsClient() {
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="text-sm text-neutral-700 hover:text-neutral-900 flex items-center gap-1"
+                  className="text-sm text-neutral-700 hover:text-neutral-900 flex items-center gap-1 self-start sm:self-auto"
                 >
                   <span>Limpiar filtros</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -168,7 +168,7 @@ export default function ProductsClient() {
                 </button>
               </div>
             ) : (
-              <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 sm:gap-y-12 md:gap-x-8">
+              <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3 sm:gap-y-12 md:gap-x-8">
                 {filteredProducts.map((product) => (
                   <ProductCard
                     key={product.id}

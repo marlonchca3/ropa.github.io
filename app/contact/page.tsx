@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="my-16 py-16 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+    <div className="mt-20 mb-12 py-8 px-4 sm:mt-24 sm:px-6 sm:py-12 md:my-16 md:px-8 md:py-16 lg:px-12 max-w-7xl mx-auto">
       <h1 className="text-3xl md:text-4xl font-light mb-4 text-center">CONTACTO</h1>
       <p className="text-neutral-600 text-center max-w-2xl mx-auto mb-8 md:mb-12">
         Estamos aqui para ayudarte con consultas sobre pedidos, productos, tallas o cambios.
@@ -62,7 +62,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12 items-start">
+      <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 items-start">
         {/* Contact Form */}
         <div id="contact-form">
           <h2 className="text-2xl font-light mb-6">Escribenos</h2>
@@ -140,7 +140,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="px-6 py-3 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+              className="w-full px-6 py-3 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors sm:w-auto"
             >
               Enviar mensaje
             </button>
@@ -150,18 +150,18 @@ export default function ContactPage() {
         {/* Contact Information and Policies */}
         <div>
           <div className="space-y-6 mb-10">
-            <div className="flex items-start">
-              <Mail className="w-5 h-5 mt-1 mr-4 text-neutral-700" />
-              <div>
+            <div className="flex items-start gap-4">
+              <Mail className="w-5 h-5 mt-1 shrink-0 text-neutral-700" />
+              <div className="min-w-0">
                 <h3 className="font-medium mb-1">Correo</h3>
-                <p className="text-neutral-600">
+                <p className="text-neutral-600 break-words">
                   <a href="mailto:lizconsuelo@gmail.com" className="hover:underline">lizconsuelo@gmail.com</a>
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start">
-              <Phone className="w-5 h-5 mt-1 mr-4 text-neutral-700" />
+            <div className="flex items-start gap-4">
+              <Phone className="w-5 h-5 mt-1 shrink-0 text-neutral-700" />
               <div>
                 <h3 className="font-medium mb-1">Telefono</h3>
                 <p className="text-neutral-600">
@@ -171,8 +171,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="flex items-start">
-              <Clock className="w-5 h-5 mt-1 mr-4 text-neutral-700" />
+            <div className="flex items-start gap-4">
+              <Clock className="w-5 h-5 mt-1 shrink-0 text-neutral-700" />
               <div>
                 <h3 className="font-medium mb-1">Horario de atencion</h3>
                 <p className="text-neutral-600">
@@ -225,7 +225,7 @@ export default function ContactPage() {
       {/* Social Media */}
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-light mb-6">Sigue nuestra historia</h2>
-        <div className="flex justify-center space-x-8">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group">
             <div className="w-12 h-12 flex items-center justify-center border border-neutral-300 rounded-full group-hover:border-neutral-900 transition-colors mb-2">
               <span className="text-xl">📸</span>

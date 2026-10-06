@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className=" my-16 py-16 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+    <div className="mt-20 mb-12 py-8 px-4 sm:mt-24 sm:px-6 sm:py-12 md:my-16 md:px-8 md:py-16 lg:px-12 max-w-7xl mx-auto">
       <h1 className="text-3xl md:text-4xl font-light mb-4 text-center">NUESTRA HISTORIA</h1>
       <p className="text-neutral-600 text-center max-w-2xl mx-auto mb-8 md:mb-12">
         Liz Consuelo es una marca peruana creada para mujeres que buscan prendas modernas, comodas y con personalidad.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-14 md:mb-20">
         <div>
-          <Image src={publicAssetPath("/images/owner.png")} alt="Fundadora de Liz Consuelo" width={600} height={800} className="w-full h-auto" />
+          <Image src={publicAssetPath("/images/owner.png")} alt="Fundadora de Liz Consuelo" width={600} height={800} className="w-full h-auto max-h-[640px] object-cover" />
         </div>
         <div>
           <h2 className="text-2xl font-light mb-6">El comienzo</h2>
@@ -36,7 +36,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-14 md:mb-20">
         <div className="order-2 md:order-1">
           <h2 className="text-2xl font-light mb-6">Nuestros valores</h2>
           <p className="text-neutral-600 mb-4">
@@ -57,7 +57,7 @@ export default function AboutPage() {
             alt="Equipo de Liz Consuelo trabajando"
             width={600}
             height={800}
-            className="w-full h-auto"
+            className="w-full h-auto max-h-[640px] object-cover"
           />
         </div>
       </div>

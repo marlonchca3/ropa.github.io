@@ -10,7 +10,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="py-4 px-4 sm:px-6 md:px-8 lg:px-12 border-b border-neutral-200 fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50">
+    <header className="py-3 px-4 sm:px-6 md:px-8 lg:px-12 border-b border-neutral-200 fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 sm:py-4">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
         <Link href="/" aria-label="Liz Consuelo - Inicio" className="shrink-0">
           <Image
@@ -18,7 +18,7 @@ export default function Header() {
             alt="Sello de Liz Consuelo"
             width={512}
             height={512}
-            className="h-12 w-12 sm:h-14 sm:w-14"
+            className="h-10 w-10 sm:h-14 sm:w-14"
             priority
           />
         </Link>
@@ -52,7 +52,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           type="button"
-          className="md:hidden"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Cerrar menu" : "Abrir menu"}
         >
@@ -62,7 +62,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-white z-50 pt-20">
+        <div className="md:hidden fixed inset-0 bg-white z-50 pt-20 overflow-y-auto">
           <nav className="p-4">
             <ul className="space-y-6 text-center">
               <li>

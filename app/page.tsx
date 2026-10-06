@@ -17,9 +17,9 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] w-full max-w-7xl mx-auto flex flex-col md:flex-row mt-[64px] my-16 py-16 ">
+      <section className="relative w-full max-w-7xl mx-auto flex flex-col md:flex-row mt-[64px] mb-10 md:my-16 md:min-h-[90vh] md:py-16">
         {/* Left side - Image */}
-        <div className="md:w-1/2 relative h-[50vh] md:h-auto order-2 md:order-1">
+        <div className="relative h-[55vh] min-h-[360px] md:h-auto md:min-h-0 md:w-1/2 order-2 md:order-1">
           <Image
             src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="Coleccion de ropa Liz Consuelo"
@@ -40,29 +40,29 @@ export default function Home() {
         </div>
 
         {/* Right side - Text content */}
-        <div className="md:w-1/2 flex flex-col justify-center px-6 py-16 md:py-0 md:px-12 lg:px-16 bg-neutral-50 z-10 order-1 md:order-2">
+        <div className="md:w-1/2 flex flex-col justify-center px-4 py-10 sm:px-6 sm:py-12 md:py-0 md:px-12 lg:px-16 bg-neutral-50 z-10 order-1 md:order-2">
           <div className="max-w-xl">
             <span className="inline-block px-3 py-1 bg-neutral-200 text-neutral-700 text-xs tracking-wider mb-6 rounded-full">
               MODA PERUANA
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-5 md:mb-6 leading-tight">
               <span className="block">Liz</span>
               <span className="block font-medium">Consuelo</span>
               <span className="block">Coleccion</span>
             </h1>
-            <p className="text-lg text-neutral-700 mb-8 max-w-md">
+            <p className="text-base sm:text-lg text-neutral-700 mb-8 max-w-md">
               Prendas versatiles, modernas y comodas, creadas en Peru para acompanarte en cada momento del dia.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
                 href="/products"
-                className="px-8 py-3 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors duration-300"
+                className="px-8 py-3 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors duration-300 text-center"
               >
                 Ver coleccion
               </Link>
               <Link
                 href="/about"
-                className="px-8 py-3 border border-neutral-300 text-neutral-700 hover:border-neutral-900 transition-colors duration-300"
+                className="px-8 py-3 border border-neutral-300 text-neutral-700 hover:border-neutral-900 transition-colors duration-300 text-center"
               >
                 Nuestra historia
               </Link>
@@ -78,7 +78,7 @@ export default function Home() {
           Explora prendas pensadas para combinar facil, sentirse bien y durar temporada tras temporada.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {/* Tops Category */}
           <Link href="/products?category=tops" className="group relative overflow-hidden">
             <div className="aspect-square bg-neutral-100 relative">
@@ -91,7 +91,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-              <h3 className="font-medium text-lg">Polos y blusas</h3>
+              <h3 className="font-medium text-base sm:text-lg">Polos y blusas</h3>
               <p className="text-sm text-white/80">Basicos y prendas casuales</p>
             </div>
           </Link>
@@ -108,7 +108,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-              <h3 className="font-medium text-lg">Pantalones</h3>
+              <h3 className="font-medium text-base sm:text-lg">Pantalones</h3>
               <p className="text-sm text-white/80">Jeans y chinos</p>
             </div>
           </Link>
@@ -125,7 +125,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-              <h3 className="font-medium text-lg">Abrigos</h3>
+              <h3 className="font-medium text-base sm:text-lg">Abrigos</h3>
               <p className="text-sm text-white/80">Casacas y capas ligeras</p>
             </div>
           </Link>
@@ -142,7 +142,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-              <h3 className="font-medium text-lg">Formal</h3>
+              <h3 className="font-medium text-base sm:text-lg">Formal</h3>
               <p className="text-sm text-white/80">Blazers y camisas</p>
             </div>
           </Link>
@@ -188,7 +188,7 @@ export default function Home() {
       {/* New Arrivals Preview */}
       <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 md:mb-12">
             <div>
               <span className="inline-block px-3 py-1 bg-neutral-100 text-neutral-700 text-xs tracking-wider mb-4 rounded-full">
                 RECIEN LLEGADO
