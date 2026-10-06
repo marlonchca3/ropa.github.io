@@ -38,6 +38,8 @@ jobs:
 
       - name: Build static site
         run: pnpm build
+        env:
+          NEXT_BASE_PATH: /ropa.github.io
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
