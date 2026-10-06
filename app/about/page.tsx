@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import { publicAssetPath } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Acerca",
@@ -16,7 +17,7 @@ export default function AboutPage() {
 
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
         <div>
-          <Image src="/images/owner.png" alt="Fundadora de Liz Consuelo" width={600} height={800} className="w-full h-auto" />
+          <Image src={publicAssetPath("/images/owner.png")} alt="Fundadora de Liz Consuelo" width={600} height={800} className="w-full h-auto" />
         </div>
         <div>
           <h2 className="text-2xl font-light mb-6">El comienzo</h2>
@@ -52,7 +53,7 @@ export default function AboutPage() {
         </div>
         <div className="order-1 md:order-2">
           <Image
-            src="/images/workshop.png"
+            src={publicAssetPath("/images/workshop.png")}
             alt="Equipo de Liz Consuelo trabajando"
             width={600}
             height={800}

@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { publicAssetPath } from "@/lib/utils"
 
 interface ImageCarouselProps {
   images: string[] | string
@@ -35,7 +36,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
     <div className="relative w-full">
       <div className="relative w-full h-[400px] overflow-hidden rounded-md">
         <Image
-          src={imageArray[currentIndex] || "/placeholder.svg"}
+          src={publicAssetPath(imageArray[currentIndex] || "/placeholder.svg")}
           alt={`${alt} - View ${currentIndex + 1}`}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -76,7 +77,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             aria-label={`View image ${index + 1}`}
           >
             <Image
-              src={image || "/placeholder.svg"}
+              src={publicAssetPath(image || "/placeholder.svg")}
               alt={`${alt} thumbnail ${index + 1}`}
               fill
               sizes="64px"

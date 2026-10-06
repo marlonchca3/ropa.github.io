@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { publicAssetPath } from "@/lib/utils"
 
 interface ProductImageProps {
   src: string | string[]
@@ -14,7 +15,7 @@ export default function ProductImage({ src, alt, priority = false, className = "
   return (
     <div className="relative w-full aspect-[3/4] overflow-hidden">
       <Image
-        src={imageSrc || "/placeholder.svg"}
+        src={publicAssetPath(imageSrc || "/placeholder.svg")}
         alt={alt}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
